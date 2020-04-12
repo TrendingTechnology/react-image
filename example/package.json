@@ -10,7 +10,8 @@
   "dependencies": {
     "react-app-polyfill": "^1.0.0",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "@lxsmnsyc/react-image": "latest"
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
