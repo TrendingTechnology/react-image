@@ -26,6 +26,15 @@ const SOURCE_SET = [
   },
 ];
 
+const Headline = () => (
+  <p>
+    This is a demo of the library <a href="https://github.com/lxsmnsyc/react-image">@lxsmnsyc/react-image</a>
+    which compares the native responsive image mechanism to the custom React component.
+
+    Try resizing the browser.
+  </p>
+);
+
 const NativeImage = () => (
   <div className="container">
     <picture>
@@ -71,6 +80,7 @@ const CustomImage = () => {
 
 const App = () => (
   <>
+    <Headline />
     <h1>Native Responsive Imaging</h1>
     <NativeImage />
     <h1>Img Component</h1>
