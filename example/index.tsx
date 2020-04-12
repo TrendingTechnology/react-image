@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Img from '../.';
+import Img from '@lxsmnsyc/react-image';
 
 import DesktopImg from './images/photo_mw_2000px_800.jpg';
 import Img16x9 from './images/photo_mw_1200px_800.jpg';
