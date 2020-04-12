@@ -28,8 +28,7 @@ const SOURCE_SET = [
 
 const Headline = () => (
   <p>
-    This is a demo of the library <a href="https://github.com/lxsmnsyc/react-image">@lxsmnsyc/react-image</a> 
-    which compares the native responsive image mechanism to the custom React component.
+    This is a demo of the library <a href="https://github.com/lxsmnsyc/react-image">@lxsmnsyc/react-image</a> which compares the native responsive image mechanism to the custom React component.
 
     Try resizing the browser.
   </p>
