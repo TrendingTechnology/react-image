@@ -42,7 +42,7 @@ type ExcludedProps =
   | 'crossOrigin'
   | 'decoding';
 
-type CustomImageProps = Omit<NativeImageProps, ExcludedProps>;
+export type CustomImageProps = Omit<NativeImageProps, ExcludedProps>;
 
 export interface SuspendedImageProps extends CustomImageProps {
   src: string;

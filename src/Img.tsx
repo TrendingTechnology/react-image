@@ -29,17 +29,19 @@ import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { useIsomorphicEffect, useIntersectionObserver, useConstantCallback } from './utils/hooks';
 import matchMedia, { matchesNothing, matchesQuery } from './utils/match-media';
-import SuspendedImage, { SuspendedImageProps } from './SuspendedImage';
+import SuspendedImage, { CustomImageProps } from './SuspendedImage';
 
 interface Source {
-  source: string;
+  source?: string | null;
   media: string;
 }
 
-export interface ImgProps extends SuspendedImageProps {
+export interface ImgProps extends CustomImageProps {
   containerRef: React.MutableRefObject<HTMLElement | null | undefined>;
   sources?: Source[];
   fallback: React.ReactNode;
+  src?: string | null;
+  alt: string;
 }
 
 const Img = React.forwardRef<HTMLImageElement, ImgProps>((
@@ -98,7 +100,7 @@ const Img = React.forwardRef<HTMLImageElement, ImgProps>((
     return undefined;
   }, [src, visible, sources]);
 
-  if (!visible) {
+  if (!(visible && imageSource)) {
     return (
       <>
         { fallback }
