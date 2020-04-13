@@ -22,7 +22,10 @@ const SOURCE_SET = [
   },
   {
     source: Img1x1,
-    media: '(max-width: 767px)',
+    media: '(min-width: 480px) and (max-width: 767px)',
+  },
+  {
+    media: '(max-width: 479px)',
   },
 ];
 
@@ -41,6 +44,7 @@ const NativeImage = () => (
       <source media={SOURCE_SET[1].media} srcSet={SOURCE_SET[1].source} />
       <source media={SOURCE_SET[2].media} srcSet={SOURCE_SET[2].source} />
       <source media={SOURCE_SET[3].media} srcSet={SOURCE_SET[3].source} />
+      <source media={SOURCE_SET[4].media} srcSet={SOURCE_SET[4].source} />
       <img src={SOURCE_SET[3].source} loading="lazy" />
     </picture>
   </div>
@@ -67,6 +71,7 @@ const CustomImage = () => {
   const ref = React.useRef<HTMLDivElement | null>(null);
   return (
     <div className="container" ref={ref}>
+      <p>at <b>less-than 480px</b> viewport, the fallback should render.</p>
       <Img
         src={SOURCE_SET[0].source}
         fallback={<Loader />}
