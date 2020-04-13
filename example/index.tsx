@@ -70,15 +70,17 @@ const Loader = () => (
 const CustomImage = () => {
   const ref = React.useRef<HTMLDivElement | null>(null);
   return (
-    <div className="container" ref={ref}>
+    <>
+      <div className="container" ref={ref}>
+        <Img
+          src={SOURCE_SET[0].source}
+          fallback={<Loader />}
+          containerRef={ref}
+          sources={SOURCE_SET}
+        />
+      </div>
       <p>at <b>less-than 480px</b> viewport, the fallback should render.</p>
-      <Img
-        src={SOURCE_SET[0].source}
-        fallback={<Loader />}
-        containerRef={ref}
-        sources={SOURCE_SET}
-      />
-    </div>
+    </>
   );
 };
 
