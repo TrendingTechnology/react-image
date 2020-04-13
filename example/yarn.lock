@@ -797,10 +797,10 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.3.tgz#f060bf6eaafae4d56a7dac618980838b0696e2ab"
   integrity sha512-FmuxfCuolpLl0AnQ2NHSzoUKWEJDFl63qXjzdoWBVyFCXzMGm1spBzk7LeHNoVCiWCF7mRVms9e6jEV9+MoPbg==
 
-"@lxsmnsyc/react-image@latest":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@lxsmnsyc/react-image/-/react-image-0.1.0.tgz#b09147214489625b18e563069ff5412c4bd767c8"
-  integrity sha512-4GaYgA69Qtk66/H1kU91m0GeYGHo+XKHJw2HzucJGHsutojL2ywVWbfDO6rTMwQMnjuyf9SAeRVyO+k96RyFpQ==
+"@lxsmnsyc/react-image@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@lxsmnsyc/react-image/-/react-image-0.2.1.tgz#72305f0b84ddca066f332b644566f85c82ec3d92"
+  integrity sha512-Ye8bY/7ppTvxVvGzivIp57DB2+jpeVDTCny41okrtDjVVWN1NEAKWaHIihtEHg6pyhJUbSwm6fR5PSTPQT3E7Q==
   dependencies:
     prop-types "^15.7.2"
 

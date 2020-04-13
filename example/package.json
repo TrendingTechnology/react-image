@@ -8,10 +8,10 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "react-app-polyfill": "^1.0.0",
+    "@lxsmnsyc/react-image": "^0.2.1",
     "react": "latest",
-    "react-dom": "latest",
-    "@lxsmnsyc/react-image": "latest"
+    "react-app-polyfill": "^1.0.0",
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
