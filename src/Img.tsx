@@ -125,17 +125,18 @@ Img.propTypes = {
   }).isRequired,
   sources: PropTypes.arrayOf(
     PropTypes.exact({
-      source: PropTypes.string.isRequired,
+      source: PropTypes.string,
       media: PropTypes.string.isRequired,
     }).isRequired,
   ),
   fallback: PropTypes.node.isRequired,
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   alt: PropTypes.string.isRequired,
 };
 
 Img.defaultProps = {
   sources: undefined,
+  src: undefined,
 };
 
 
