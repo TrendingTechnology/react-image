@@ -52,13 +52,13 @@ export function useConstantCallback<T extends((...args: any) => any)>(callback: 
 }
 
 export function useIntersectionObserver(
-  reference: React.MutableRefObject<HTMLElement | null | undefined>,
+  reference: React.MutableRefObject<HTMLElement | null | undefined | {}>,
   callback: (entry: IntersectionObserverEntry) => boolean,
 ): void {
   React.useEffect(() => {
     const el = reference.current;
 
-    if (el) {
+    if (el && el instanceof HTMLElement) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && callback(entry)) {

@@ -31,14 +31,14 @@ import { useIsomorphicEffect, useIntersectionObserver, useConstantCallback } fro
 import matchMedia, { matchesNothing, matchesQuery } from './utils/match-media';
 import SuspendedImage, { CustomImageProps } from './SuspendedImage';
 
-interface Source {
+export interface ImageSource {
   source?: string | null;
   media: string;
 }
 
 export interface ImgProps extends CustomImageProps {
-  containerRef: React.MutableRefObject<HTMLElement | null | undefined>;
-  sources?: Source[];
+  containerRef: React.MutableRefObject<HTMLElement | null | undefined | {}>;
+  sources?: ImageSource[];
   fallback: React.ReactNode;
   src?: string | null;
   alt: string;
@@ -120,7 +120,7 @@ Img.displayName = 'Img';
 Img.propTypes = {
   containerRef: PropTypes.shape({
     current: PropTypes.oneOfType([
-      PropTypes.instanceOf(HTMLElement),
+      PropTypes.object,
     ]).isRequired,
   }).isRequired,
   sources: PropTypes.arrayOf(
